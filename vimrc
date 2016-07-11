@@ -106,7 +106,7 @@ set incsearch
 set nohlsearch
 
 " Turn off line wrapping.
-set nowrap    
+set nowrap
 " Show 3 lines of context around the cursor.
 set scrolloff=3
 
@@ -210,6 +210,17 @@ nnoremap <leader>hs :set hlsearch!<cr>
 " Maps <C-C> to <esc>
 noremap <C-C> <esc>
 
+" Disable arrow keys
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
 " Go full-screen
 nnoremap <leader>fs :set lines=999 columns=9999<cr>
 
@@ -218,6 +229,14 @@ nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 " }}}
 " }}}
 " ##### Plugin settings  {{{
+" ##### Go syntax  {{{
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+" }}}
 " ##### RuboCop  {{{
 nnoremap <leader>fmt :RuboCop -a<cr>
 nnoremap <leader>lnt :RuboCop -l<cr>
