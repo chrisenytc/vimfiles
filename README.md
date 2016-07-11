@@ -1,17 +1,19 @@
-Christopher's vimfiles
+# Christopher's vimfiles
 
-> My vimfiles
-
-These are my vimfiles. I created them when I started using Vim and adapted them to my needs.
+> These are my vimfiles. I created them when I started using Vim and adapted them to my needs.
 
 ## What's included
 
 #### Themes
+
 * [Gotham (colorscheme)](https://github.com/whatyouhide/vim-gotham)
 * [Heroku (colorscheme)](https://github.com/stulzer/heroku-colorscheme)
+
 #### Statusline
+
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+
 #### General
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 * [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils)
@@ -40,12 +42,16 @@ These are my vimfiles. I created them when I started using Vim and adapted them 
 * [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 * [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 * [tabular](https://github.com/godlygeek/tabular)
+
 #### Language Tools
+
 * [syntastic](https://github.com/scrooloose/syntastic)
 * [vim-rubocop](https://github.com/chrisenytc/vim-rubocop)
 * [sparkup](https://github.com/rstacruz/sparkup)
 * [sourcebeautify.vim](https://github.com/michalliu/sourcebeautify.vim)
+
 #### Languages
+
 * [vim-go](https://github.com/fatih/vim-go)
 * [vim-node](https://github.com/moll/vim-node)
 * [vim-perl](https://github.com/vim-perl/vim-perl)
@@ -86,7 +92,7 @@ Link vimrc and gvimrc to your home directory:
 $ ln -s ~/.vim/vimrc ~/.vimrc && ln -s ~/.vim/gvimrc ~/.gvimrc
 ```
 
-Download [Fira Code](https://github.com/tonsky/FiraCode/releases/download/1.102/FiraCode_1.102.zip) and click "Install font" to install Fira Code's font which supports fancy characters.
+Download [Fira Code](https://github.com/tonsky/FiraCode/releases/download/1.102/FiraCode_1.102.zip) and click `Install font` to install Fira Code's font which supports fancy characters.
 
 ```bash
 $ open ~/FiraCode-Regular.otf
