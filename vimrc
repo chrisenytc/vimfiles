@@ -123,9 +123,9 @@ set nowritebackup
 set directory=$HOME/.vim/tmp
 
 " Global tab width.
-set tabstop=4
+set tabstop=2
 " And again, related.
-set shiftwidth=4
+set shiftwidth=2
 
 " Files open expanded
 set foldlevelstart=50
@@ -248,7 +248,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec = 'rubocop'
