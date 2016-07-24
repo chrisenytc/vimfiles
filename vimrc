@@ -48,6 +48,7 @@ Plug 'scrooloose/syntastic'
 Plug 'chrisenytc/vim-rubocop'
 Plug 'rstacruz/sparkup'
 Plug 'michalliu/sourcebeautify.vim'
+Plug 'wfleming/vim-codeclimate'
 " Languages
 Plug 'fatih/vim-go'
 Plug 'moll/vim-node'
@@ -240,6 +241,11 @@ let g:go_highlight_build_constraints = 1
 " ##### RuboCop  {{{
 nnoremap <leader>fmt :RuboCop -a<cr>
 nnoremap <leader>lnt :RuboCop -l<cr>
+" }}}
+" ##### CodeClimate  {{{
+nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
+nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
+nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 " }}}
 " ##### Syntastic  {{{
 set statusline+=%#warningmsg#
