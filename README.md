@@ -113,7 +113,7 @@ $ mvim
 Install plugins by typing
 
 ```
-:PluginInstall
+:PlugInstall
 ```
 
 Restart your Vim or MacVim and enjoy! :)
