@@ -64,7 +64,7 @@ Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'elixir-lang/vim-elixir'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -261,6 +261,8 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec = 'rubocop'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint'
+let g:syntastic_json_checkers = ['jsonlint']
+let g:syntastic_json_jsonlint_exec = 'jsonlint'
 
 nnoremap <leader>chk :SyntasticCheck<cr>
 " }}}
@@ -390,10 +392,14 @@ autocmd BufEnter *.md colorscheme gotham256
 " }}}
 " ##### JavaScript  {{{
 " Sets javascript syntax for *.json files.
-autocmd BufRead,BufNewFile *.json set filetype=javascript
+autocmd BufRead,BufNewFile *.json set filetype=json
 
 " Sets html syntax for *.ejs files.
 autocmd BufRead,BufNewFile *.ejs set filetype=html
+" }}}
+" ##### TypeScript  {{{
+" Sets typescript syntax for *.ts files.
+autocmd BufRead,BufNewFile *.ts set filetype=typescript
 " }}}
 " ##### Vim {{{
 " Make vimrcs open folded
