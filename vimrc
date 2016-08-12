@@ -43,6 +43,7 @@ Plug 'embear/vim-localvimrc'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'godlygeek/tabular'
+Plug 'rizzatti/dash.vim'
 " Language tools
 Plug 'scrooloose/syntastic'
 Plug 'chrisenytc/vim-rubocop'
