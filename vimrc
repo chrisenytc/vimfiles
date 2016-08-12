@@ -261,6 +261,8 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec = 'rubocop'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint'
+let g:syntastic_typecript_checkers = ['tslint']
+let g:syntastic_typescript_tslint_exec = 'tslint'
 let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_json_jsonlint_exec = 'jsonlint'
 
