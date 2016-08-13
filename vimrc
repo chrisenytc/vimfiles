@@ -265,9 +265,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint'
 let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_json_jsonlint_exec = 'jsonlint'
-let g:syntastic_typescript_checkers = ['tslint', 'tsc']
+let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_typescript_tslint_exec = 'tslint --config '+ dirpath + '/tslint.json' + ' ' + '--project '+ dirpath + '/tsconfig.json'
-let g:syntastic_typescript_tsc_exec = 'tsc'
 
 nnoremap <leader>chk :SyntasticCheck<cr>
 " }}}
