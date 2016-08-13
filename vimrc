@@ -253,6 +253,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let dirpath = getcwd()
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
@@ -261,10 +263,11 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec = 'rubocop'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint'
-let g:syntastic_typecript_checkers = ['tslint']
-let g:syntastic_typescript_tslint_exec = 'tslint'
 let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_json_jsonlint_exec = 'jsonlint'
+let g:syntastic_typescript_checkers = ['tslint', 'tsc']
+let g:syntastic_typescript_tslint_exec = 'tslint --config '+ dirpath + '/tslint.json' + ' ' + '--project '+ dirpath + '/tsconfig.json'
+let g:syntastic_typescript_tsc_exec = 'tsc'
 
 nnoremap <leader>chk :SyntasticCheck<cr>
 " }}}
