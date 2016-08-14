@@ -12,6 +12,8 @@ call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'whatyouhide/vim-gotham'
 Plug 'stulzer/heroku-colorscheme'
+Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'dracula/vim'
 " Statusline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -152,8 +154,23 @@ set autoread
 syntax on
 filetype plugin indent on
 " Sets the colorscheme for terminal sessions too.
-colorscheme gotham256
-autocmd BufEnter * colorscheme gotham256
+set background=dark
+colorscheme deep-space
+autocmd BufEnter * colorscheme deep-space
+
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, remove the outermost $TMUX check.
+if (empty($TMUX))
+    "For Neovim 0.1.3 and 0.1.4
+    if (has("nvim"))
+        let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    endif
+
+    "For Neovim 0.1.5+ and Vim 7.4.1799+
+    if (has("termguicolors"))
+        set termguicolors
+    endif
+endif
 
 " Leader = ,
 let mapleader = ","
@@ -292,7 +309,7 @@ let g:NERDTreeHijackNetrw = 0
 " }}}
 " ##### Airline  {{{
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'gotham256'
+let g:airline_theme = 'deep_space'
 let g:airline_section_warning = ''
 let g:airline_inactive_collapse = 0
 let g:airline#extensions#default#section_truncate_width = {
@@ -391,12 +408,13 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 " Wrap markdown files.
 autocmd BufRead,BufNewFile *.md set wrap
-
-autocmd BufEnter *.md colorscheme gotham256
 " }}}
 " ##### JavaScript  {{{
 " Sets javascript syntax for *.json files.
 autocmd BufRead,BufNewFile *.json set filetype=json
+
+" Sets jake syntax for *.jake files.
+autocmd BufRead,BufNewFile *.jake set filetype=javascript
 
 " Sets html syntax for *.ejs files.
 autocmd BufRead,BufNewFile *.ejs set filetype=html

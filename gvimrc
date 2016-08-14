@@ -12,7 +12,7 @@ set lines=250 columns=80          " Window dimensions.
 set guioptions-=r                 " Don't show right scrollbar.
 set guioptions-=L                 " Don't show left scrollbar.
 
-colorscheme gotham256
+colorscheme deep-space
 
 " Save using Command-S on MacVim without replacing.
 noremap <D-s> :w<CR>
